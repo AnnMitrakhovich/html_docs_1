@@ -1,6 +1,7 @@
 html {
     font-family: 'AR One Sans', sans-serif;
     font-family: 'Roboto', sans-serif;
+    background-color: rgb(248, 227, 207);
     
 }
 .title {
@@ -11,4 +12,10 @@ html {
     color: cadetblue;
     background-color: beige;
     
+}
+body {
+    width: 600px;
+    margin: auto;
+    padding: 0 20px 20px 20px;
+    border: 2px solid wheat;
 }
