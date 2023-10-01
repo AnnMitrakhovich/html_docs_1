@@ -1,0 +1,14 @@
+html {
+    font-family: 'AR One Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    
+}
+.title {
+    color: darkcyan;
+    background-color: lightblue;
+}
+.heading {
+    color: cadetblue;
+    background-color: beige;
+    
+}
