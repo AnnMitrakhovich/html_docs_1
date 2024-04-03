@@ -1,6 +1,5 @@
 "use strict";
-try {
-    await fetch('http://example.com');
-  } catch(err) {
-    alert(err); // Failed to fetch
-}
+
+setTimeout(() => console.log("Отложен 100"), 100);
+console.log("Сразу");
+setTimeout(() => console.log("Отложен 0"), 0);
