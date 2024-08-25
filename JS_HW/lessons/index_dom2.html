@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework_1</title>
+</head>
+<body>
+    <div id="block">
+        <p>p1</p>
+        <p>p2</p>
+        <p class="www">text1</p>
+        <p class="www">text2</p>
+        <a class="link" href="#">Link text html</a>
+        <img class="photo" src="img/poster.jpg" alt="">
+    </div>
+
+    <script>
+        const paragraphById = document.querySelector('#block p'); //получить первый элемент - параграф p в div с id block
+        console.log(paragraphById);
+        const paragraphByClass = document.querySelector('.www'); // получить ссылку на элемент дива классом www
+        console.log(paragraphByClass);
+        // или так
+        const paragraphsCollection = document.querySelectorAll('.www');
+        console.log(paragraphsCollection[0]);
+        // поменять текст внутри ссылки <a>
+        document.querySelector('a').textContent = 'Changed TEXT';
+        const urlChanged = document.querySelector('.link');
+        urlChanged.href = 'https://developer.mozilla.org/ru/';
+        const imgChanded = document.querySelector('.photo');
+        //imgChanded.src = 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0590e4ae-d6a7-4bd2-b0a3-c055bdd258aa/d47634p-8856d1fb-c24e-465f-adda-111907d17bd7.jpg/v1/fill/w_894,h_894,q_70,strp/aono_tsukune___ghoul_form_by_kira749_d47634p-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTAwIiwicGF0aCI6IlwvZlwvMDU5MGU0YWUtZDZhNy00YmQyLWIwYTMtYzA1NWJkZDI1OGFhXC9kNDc2MzRwLTg4NTZkMWZiLWMyNGUtNDY1Zi1hZGRhLTExMTkwN2QxN2JkNy5qcGciLCJ3aWR0aCI6Ijw9OTAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.EPwyVwY5fI73KJKqUsOw-WP27PGdcy1J5sjwlTwgrxI';
+        gi
+        
+    </script>
+</body>
+</html>
