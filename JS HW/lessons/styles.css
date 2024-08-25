@@ -1,0 +1,22 @@
+.title {
+    color: #e31848;
+    font-family: Kodchasan;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+body {
+    background-color: rgb(241, 241, 254); /* Цвет фона для всего тела страницы */
+}
+
+h2 {
+    color: rgb(64, 18, 158);
+    font-family: "Gill Sans", sans-serif;
+    font-size: 24px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Занятие по DOM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1 class="title">Lessons abour DOM</h1>
+    <button class="btn">Start</button>
+    <script>
+        const h1 = document.querySelector('.title');
+        h1.textContent = 'Lessons abour DOM and JS';
+        const h2 = document.createElement('h2');
+
+        const p1 = document.createElement('p');
+
+        const buttonChange = document.querySelector('.btn');
+        buttonChange.onclick = function () {
+            if (buttonChange.textContent === 'Start') {
+                buttonChange.textContent = 'Lesson started';
+                // Добавляем элементы в DOM
+                document.body.appendChild(h2);
+                h2.textContent = 'Hello, first lesson';
+                document.body.appendChild(p1);
+                p1.textContent = 'This is lesson about DOM';
+            } else {
+                buttonChange.textContent = 'Start';
+                // Удаляем элементы из DOM
+                h2.remove();
+                p1.remove();
+            }
+        }
+
+        // Добавляем элементы в DOM
+        document.body.appendChild(h2);
+        document.body.appendChild(p1);
+    </script>
+</body>
+
+</html>

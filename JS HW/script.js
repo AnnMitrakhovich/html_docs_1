@@ -1,0 +1,1 @@
+alert('Текст из index.html');

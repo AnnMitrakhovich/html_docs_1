@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lessons</title>
+</head>
+
+<body>
+    <p>Создайте объект с ключами от 1 до 7, в качестве значений содержащий имена дней недели. Выведите на экран
+        “Вторник”</p>
+    <!-- <script>
+        const newDays = {
+            1: "Monday",
+            2: "Tuesday",
+            3: "Wednesday",
+            4: "Thurday",
+            5: "Friday",
+            6: "Saturday",
+            7: "Sunday"
+        }
+        alert(newDays[2]);
+    </script> -->
+    <p>Создайте объект user с ключами 'name', 'surname', ‘age’. Выведите на экран фамилию, имя и возраст через дефис.
+    </p>
+    <!-- <script>
+        const user = {
+            name: "Ivan",
+            surname: "Potapow",
+            age: "28"
+        }
+        alert(user.name + " - " + user.surname + " - " + user.age)
+        
+        user.lastName = prompt("Enter last name");
+        
+        console.log(user.lastName);
+        delete user.surname;
+        console.log(user);
+    </script> -->
+    <p>Добавьте в объект user свойство отчество, которое пользователь должен ввести с клавиатуры</p>
+
+    <p>Удалите свойство surname</p>
+
+    <p>Создать объект товара
+        id
+        название
+        описание
+        цена
+        (вывести в консоль, товар с 20% скидкой)
+    </p>
+    <!-- <script>
+        const product = {
+            id: "1",
+            nameProduct: "Product 1",
+            description: "Small, black",
+            priceProduct: 2000,
+        }
+            product.priceProduct = product.priceProduct * 0.8;
+        console.log(product.priceProduct);
+
+    </script> -->
+    <p>Даны два массива: первый с названиями дней недели, а второй - с их порядковыми номерами:
+        const arr1 = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
+        const arr2 = [1, 2, 3, 4, 5, 6, 7];
+        С помощью цикла создайте объект, ключами которого будут названия дней, а значениями - их номера (или наоборот)
+        const obj = {x: 1, y: 2, z: 3};
+        Переберите этот объект циклом и возведите каждый элемент этого объекта в квадрат.
+        Создать массив состоящий из 3х объектов товаров
+        id
+        название
+        описание
+        цена
+        Вывести в консоль все названия товаров</p>
+    <!-- <script>
+            const arrFirst = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
+            const arrSecond = [1, 2, 3, 4, 5, 6, 7];
+            const weekDays = {};
+            for (let i = 0; i < arrFirst.length; i++) {
+                weekDays[arrFirst[i]] = arrSecond[i]                
+            }
+            console.log(weekDays);
+
+            const obj = {x: 1, y: 2, z: 3};
+            for (const key in obj) {
+                obj[key] = obj[key] * obj[key];                   
+                
+            }
+            console.log(obj);
+
+            const prodArray = [
+                {id: "1",
+            nameProduct: "Product 1",
+            description: "Small, black",
+            priceProduct: 2500,},
+            {id: "2",
+            nameProduct: "Product 2",
+            description: "Small, black",
+            priceProduct: 2000,},
+            {id: "3",
+            nameProduct: "Product 3",
+            description: "Small, black",
+            priceProduct: 2100,}
+
+            ]
+            
+            for (const product in prodArray) {
+                    if (Object.prototype.hasOwnProperty.call(prodArray, product)) {
+                        console.log(prodArray[product].nameProduct);                        
+                    }
+            }
+          
+
+            
+        </script> 
+         -->
+    <!-- <script>
+        const obj = {
+            key1: {
+                key1: 1,
+                key2: 2,
+                key3: 3,//6
+            },
+            key2: {
+                key1: 4,
+                key2: 5,
+                key3: 6,//15
+            },
+            key3: {
+                key1: 7,
+                key2: 8,
+                key3: 9,//24
+            },
+        }
+        let sum = 0;
+        for (const keys in obj) { 
+            let subObj = obj[keys]           
+            for (const key in subObj) {
+                sum = sum + subObj[key];
+            }
+        }
+        console.log(sum);
+        let res = 0;
+        for (const key in obj) {
+            if (Object.prototype.hasOwnProperty.call(obj, key)) {
+                res += Object.values(obj[key]).reduce((a,b) => a+ b); 
+                
+            }
+        }
+        console.log(res);
+    </script> -->
+
+    <!-- Задание 1
+    Дан объект numbers. Необходимо в консоль вывести все значения больше или равные 3.    
+    const numbers = {
+    keyin1: 1,
+    keyin2: 2,
+    keyin3: 3,
+    keyin4: 4,
+    keyin5: 5,
+    keyin6: 6,
+    keyin7: 7,
+    }
+    
+    
+    
+    Задание 2
+    Необходимо из объекта, который лежит в константе post вывести значения, к которым приписан комментарий, в консоль.
+    
+    const post = {
+    author: "John", // вывести этот текст
+    postId: 23,
+    comments: [
+    {
+    userId: 10,
+    userName: "Alex",
+    text: "lorem ipsum",
+    rating: {
+    likes: 10,
+    dislikes: 2, // вывести это число
+    },
+    },
+    {
+    userId: 5, // вывести это число
+    userName: "Jane",
+    text: "lorem ipsum 2", // вывести этот текст
+    rating: {
+    likes: 3,
+    dislikes: 1,
+    },
+    },
+    ],
+    };
+    
+    
+    
+    Задание 3
+    Дан массив products, необходимо цену каждого продукта уменьшить на 15% используя метод forEach.
+    
+    const products = [
+    {
+    id: 3,
+    price: 200,
+    },
+    {
+    id: 4,
+    price: 900,
+    },
+    {
+    id: 1,
+    price: 1000,
+    },
+    ];
+    
+    
+    
+    Задание 4
+    1. Необходимо вывести в консоль массив продуктов в котором есть хоть одна фотография используя метод filter. Исходные данные - массив products.
+    2. Необходимо отсортировать массив products используя метод sort по цене, начиная с самой маленькой, заканчивая самой большой ценой, после чего вывести отсортированный массив в консоль.
+    
+    ```
+    const products = [
+    {
+    id: 3,
+    price: 127,
+    photos: [
+    "1.jpg",
+    "2.jpg",
+    ],
+    },
+    {
+    id: 5,
+    price: 499,
+    photos: [],
+    },
+    {
+    id: 10,
+    price: 26,
+    photos: [
+    "3.jpg",
+    ],
+    },
+    {
+    id: 8,
+    price: 78,
+    },
+    ];
+    
+     -->
+    <script>
+        //Задание 1
+        const numbers = {
+            keyin1: 1,
+            keyin2: 2,
+            keyin3: 3,
+            keyin4: 4,
+            keyin5: 5,
+            keyin6: 6,
+            keyin7: 7,
+        }
+        //Необходимо в консоль вывести все значения больше или равные 3.
+
+        for (const key in numbers) {
+            if (Object.prototype.hasOwnProperty.call(numbers, key)) {
+                const element = numbers[key];
+                if (element >= 3) {
+                    console.log(element);
+                }
+            }
+        }
+
+        //Задание 2
+
+        //Необходимо из объекта, который лежит в константе post вывести значения, к которым приписан комментарий, в консоль.
+
+        const post = {
+            author: "John", // вывести этот текст
+            postId: 23,
+            comments: [
+                {
+                    userId: 10,
+                    userName: "Alex",
+                    text: "lorem ipsum",
+                    rating: {
+                        likes: 10,
+                        dislikes: 2, // вывести это число
+                    },
+                },
+                {
+                    userId: 5, // вывести это число
+                    userName: "Jane",
+                    text: "lorem ipsum 2", // вывести этот текст
+                    rating: {
+                        likes: 3,
+                        dislikes: 1,
+                    },
+                },
+            ],
+        };
+
+        // Выводим текст автора
+        console.log(post.author);
+
+        // Выводим значение dislikes из первого комментария
+        console.log(post.comments[0].rating.dislikes);
+
+        // Выводим userId из второго комментария
+        console.log(post.comments[1].userId);
+
+        // Выводим текст из второго комментария
+        console.log(post.comments[1].text);
+
+        //Задание 3     
+        
+        //Дан массив products, необходимо цену каждого продукта уменьшить на 15% используя метод forEach.
+
+        const product = [
+            {
+                id: 3,
+                price: 200,
+            },
+            {
+                id: 4,
+                price: 900,
+            },
+            {
+                id: 1,
+                price: 1000,
+            },
+        ];
+        product.forEach(element => {
+            element.price = element.price * 0.85;
+        });
+        console.log(product);
+
+        const products = [
+            {
+                id: 3,
+                price: 127,
+                photos: [
+                    "1.jpg",
+                    "2.jpg",
+                ],
+            },
+            {
+                id: 5,
+                price: 499,
+                photos: [],
+            },
+            {
+                id: 10,
+                price: 26,
+                photos: [
+                    "3.jpg",
+                ],
+            },
+            {
+                id: 8,
+                price: 78,
+            },
+        ];
+
+        const productsWithPhotos = products.filter(product => product.photos && product.photos.length > 0);
+        console.log(productsWithPhotos);
+
+        const sortedProducts = products.sort((a, b) => a.price - b.price);
+        console.log(sortedProducts);
+
+
+        //1. Необходимо вывести в консоль массив продуктов в котором есть хоть одна фотография используя метод filter. Исходные данные - массив products.
+        // 2. Необходимо отсортировать массив products используя метод sort по цене, начиная с самой маленькой, заканчивая самой большой ценой, после чего вывести отсортированный массив в консоль.
+
+        //Задание 5
+
+        const en = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+        const ru = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"];
+
+        //Вам необходимо объединить 2 этих массива, чтобы значения первого массива были ключами, а значения второго массива — значениями.
+
+        const weeksArray = {};
+        if (en.length === ru.length) {
+            for (let i = 0; i < en.length; i++) {
+                weeksArray[en[i]] = ru[i];
+            }
+
+        } else {
+            console.log("Impossible to transform");
+        }
+        console.log(weeksArray);
+
+
+    </script>
+
+</body>
+
+</html>
